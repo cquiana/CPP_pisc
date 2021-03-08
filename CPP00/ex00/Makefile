@@ -6,7 +6,7 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/08 22:16:01 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/08 22:34:01 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/08 22:40:23 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,3 +36,4 @@ fclean: clean
 
 re: fclean all
 
+.PHONY all re clean fclean
