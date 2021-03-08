@@ -6,7 +6,7 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/08 22:16:01 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/08 22:40:23 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/08 22:47:31 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,24 +16,27 @@ SRCS = megaphone.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-CC = clang++
+CL = clang++
 
 FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 %.o:%.cpp
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CL) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) $(FLAGS) -o $(NAME)
+	@$(CL) $(OBJS) $(FLAGS) -o $(NAME)
 
 clean:
 	@rm -f $(OBJS)
+	@echo "Object file deleted"
 
 fclean: clean
 	@rm -f $(NAME)
+	@echo "All file deleted"
 
 re: fclean all
+	@echo "Project was remaked"
 
-.PHONY all re clean fclean
+.PHONY: all re clean fclean
