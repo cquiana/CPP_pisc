@@ -6,13 +6,11 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 07:09:43 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/11 17:50:35 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/11 18:27:04 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-
-void searchContact(Contact *contact, int &i);
 
 void addContact(Contact *contact, int &i)
 {
@@ -42,7 +40,7 @@ int	miniAtoi(const std::string str)
 
 void waitNum(Contact *contact, int &i)
 {
-	int num = i;
+	int num = 0;
 	std::string		input;
 
 	std::cout << std::endl;
@@ -51,13 +49,17 @@ void waitNum(Contact *contact, int &i)
 	if (std::cin.eof() == true)
 		return;
 	num = miniAtoi(input);
-
 	if (num <= 0 || num > 8)
 	{
 		std::cout << "-------------------------------------------------" << std::endl;
 		std::cout << "Please input digit from 1 to 8 " << std::endl;
 		std::cout << "-------------------------------------------------" << std::endl;
-		searchContact(contact, i);
+	}
+	else if (num > i)
+	{
+		std::cout << "-------------------------------------------------" << std::endl;
+		std::cout << "Contact #" << num <<  " don\'t exist!" << std::endl;
+		std::cout << "-------------------------------------------------" << std::endl;
 	}
 	else
 		contact[num - 1].displayContact();
