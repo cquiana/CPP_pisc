@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 22:08:48 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/08 23:01:57 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/10 18:48:00 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		main(int ac, char **av)
 	int j = 0;
 
 	if (ac < 2) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << "\n";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	} else {
 		while (i < ac) {
 			j = 0;
@@ -27,6 +27,8 @@ int		main(int ac, char **av)
 				j++;
 			}
 			i++;
+			// if (i != ac)
+			// 	std::cout << " ";
 		}
 		std::cout << "\n";
 	}

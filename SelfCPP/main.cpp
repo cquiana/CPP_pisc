@@ -1,31 +1,62 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
+#include "sample.hpp"
+// using namespace std;
 
 #define MAX(x, y, r) {int _x = (x); int _y = (y); int _r = ((r) = (_x > _y ? _x : _y)); r = _r ;}
 
-int		get_log(int x)
+void swap(int *x, int *y)
 {
-	int res = 0;
-	while (x > 1) {
-		x /= 2;
-		res++;
+	int tmp;
+
+	tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
+
+void rotate(int *a, unsigned size, int shift)
+{
+	for (int i = 0; i < shift; i++)
+	{
+		for (int j = 0; j < size - 1; j++)
+		{
+			swap(&a[j], &a[j + 1]);
+		}
 	}
-	return (res);
+
 }
 
 int		main()
 {
-	int n = 0;
-	int a = 0;
 
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> a;
-		cout << get_log(a) << endl;
-	}
+	int a[] = {1, 2, 3, 4, 5};
+	rotate(a, 5, 2);
+	std::cout << a[0] << std::endl;
+	std::cout << a[1] << std::endl;
+	std::cout << a[2] << std::endl;
+	std::cout << a[3] << std::endl;
+	std::cout << a[4] << std::endl;
+
+
+	// Sample instance;
+
+	// instance.setF(42);
+	// std::cout << "instance.getF() :" << instance.getF() << std::endl;
+
+	// instance.setF(-42);
+	// std::cout << "instance.getF() :" << instance.getF() << std::endl;
 	return (0);
 }
+
+// int		get_log(int x)
+// {
+// 	int res = 0;
+// 	while (x > 1) {
+// 		x /= 2;
+// 		res++;
+// 	}
+// 	return (res);
+// }
 	// cout << res << endl;
 	// int res = get_log(59218);
 

@@ -5,14 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/03/08 22:16:01 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/11 13:13:11 by cquiana          ###   ########.fr        #
+#    Created: 2021/03/11 11:15:16 by cquiana           #+#    #+#              #
+#    Updated: 2021/03/11 13:13:19 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
-SRCS = megaphone.cpp
+SRCS = PhoneBook.cpp \
+		Contact.cpp
+
+HEADER = Contact.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -25,18 +28,19 @@ all: $(NAME)
 %.o:%.cpp
 	$(CL) $(FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	@$(CL) $(OBJS) $(FLAGS) -o $(NAME)
 
 clean:
 	@rm -f $(OBJS)
-	@echo "Object file deleted"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "All file deleted"
 
 re: fclean all
 	@echo "Project was remaked"
+
+run: clean
+	@./phonebook
 
 .PHONY: all re clean fclean
