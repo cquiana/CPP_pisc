@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 10:35:10 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 10:39:23 by cquiana          ###   ########.fr       */
+/*   Created: 2021/03/12 10:53:53 by cquiana           #+#    #+#             */
+/*   Updated: 2021/03/12 14:13:33 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <unistd.h>
+#include "ZombieEvent.hpp"
 
-void memoryLeak()
+ZombieEvent::ZombieEvent(void)
 {
-	std::string* panther = new std::string("String panther");
-	std::cout << *panther << std::endl;
-	delete panther;
+	this->_type = "slow";
+	return;
 }
 
-int main(void)
+ZombieEvent::~ZombieEvent()
 {
-	memoryLeak();
-	sleep(100);
-	return 0;
+	return;
+}
+
+void ZombieEvent::setZombieType(std::string type)
+{
+	this->_type = type;
+	return;
+}
+
+Zombie *ZombieEvent::newZombie(std::string name)
+{
+	Zombie *newZombie =  new Zombie(name, this->_type);
+	return newZombie;
 }

@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 10:35:10 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 10:39:23 by cquiana          ###   ########.fr       */
+/*   Created: 2021/03/12 10:43:54 by cquiana           #+#    #+#             */
+/*   Updated: 2021/03/12 14:29:11 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
+
 #include <iostream>
 #include <string>
-#include <unistd.h>
 
-void memoryLeak()
+class Zombie
 {
-	std::string* panther = new std::string("String panther");
-	std::cout << *panther << std::endl;
-	delete panther;
-}
+private:
+	std::string _name;
+	std::string _type;
+public:
+	Zombie();
+	Zombie(std::string name, std::string type);
+	~Zombie();
 
-int main(void)
-{
-	memoryLeak();
-	sleep(100);
-	return 0;
-}
+	void announce();
+};
+
+#endif

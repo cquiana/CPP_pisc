@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 07:12:31 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 10:32:47 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/12 15:11:15 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	ponyOnTheHeap(void)
 
 int		main(void)
 {
+	std::cout << "Pony on stack" << std::endl;
 	ponyOnTheStack();
+	std::cout << std::endl;
+	std::cout << "Pony on heap" << std::endl;
 	ponyOnTheHeap();
 	return 0;
 }
