@@ -6,17 +6,16 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/12 13:14:10 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/12 15:34:32 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/15 19:54:01 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombieHorde
+NAME = replace
 
-SRCS = Zombie.cpp \
-		ZombieHorde.cpp \
+SRCS = StreamEditor.cpp \
 		main.cpp
 
-HEADER = Zombie.hpp ZombieHorde.cpp
+HEADER = StreamEditor.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -42,6 +41,6 @@ re: fclean all
 	@echo "Project was remaked"
 
 run: clean
-	@./zombieHorde
+	@./replace
 
 .PHONY: all re clean fclean
