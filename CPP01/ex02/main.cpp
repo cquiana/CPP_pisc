@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 13:17:32 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 15:09:22 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/12 18:39:29 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ Zombie* randomChump(void)
 							"John", "Sarah", "Candy", "Lina", "Kate"};
 	newZ = new Zombie(names[rd], "random");
 	return newZ;
-
 }
 
 int		main(void)

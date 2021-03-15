@@ -1,52 +1,105 @@
 #include <iostream>
 #include <cmath>
 #include "sample.hpp"
-// using namespace std;
+using namespace std;
 
-#define MAX(x, y, r) {int _x = (x); int _y = (y); int _r = ((r) = (_x > _y ? _x : _y)); r = _r ;}
 
-void swap(int *x, int *y)
+int ** transpose(const int * const * m, unsigned rows, unsigned cols)
 {
-	int tmp;
+	int **n = new int *[cols];
 
-	tmp = *x;
-	*x = *y;
-	*y = tmp;
-}
-
-void rotate(int *a, unsigned size, int shift)
-{
-	for (int i = 0; i < shift; i++)
+	for (int i = 0; i < cols; i++)
 	{
-		for (int j = 0; j < size - 1; j++)
+		n[i] = new int [rows];
+		for (int j = 0; j < rows; j++)
 		{
-			swap(&a[j], &a[j + 1]);
+			n[i][j] = m[j][i];
 		}
 	}
-
+	return n;
 }
 
-int		main()
+
+void swap_min(int *m[], unsigned rows, unsigned cols)
 {
-
-	int a[] = {1, 2, 3, 4, 5};
-	rotate(a, 5, 2);
-	std::cout << a[0] << std::endl;
-	std::cout << a[1] << std::endl;
-	std::cout << a[2] << std::endl;
-	std::cout << a[3] << std::endl;
-	std::cout << a[4] << std::endl;
-
-
-	// Sample instance;
-
-	// instance.setF(42);
-	// std::cout << "instance.getF() :" << instance.getF() << std::endl;
-
-	// instance.setF(-42);
-	// std::cout << "instance.getF() :" << instance.getF() << std::endl;
-	return (0);
+	int tmp = m[0][0];
+	int *tptr = 0;
+	int idx = 0;
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			if (tmp > m[i][j]) {
+				tmp = m[i][j];
+				// tptr = m[i];
+				idx = i;
+			}
+		}
+	}
+	if (idx != 0) {
+		tptr = m[0];
+		m[0] = m[idx];
+		m[idx] = tptr;
+	}
 }
+void print_matrix( int *m[ ], const unsigned rows, const unsigned cols )
+{
+for ( size_t i = 0; i < rows; ++i )
+    {
+        for ( size_t j = 0; j < cols; ++j )
+            std::cout << m[ i ][ j ] << ' ';
+        std::cout << "\n";
+    }
+}
+
+void input_matrix( int *m[ ], const unsigned rows, const unsigned cols )
+{
+    for ( size_t i = 0; i < rows; i++ )
+        for ( size_t j = 0; j < cols; j++ )
+        {
+            std::cout << "Input matrix[" << i << "," << j << "]: ";
+            std::cin >> m[ i ][ j ];
+        }
+}
+
+
+int main()
+{
+    unsigned rows, columns;
+    std::cout << "Input number of rows: ";
+    std::cin >> rows;
+    std::cout << "Input number of columns: ";
+    std::cin >> columns;
+    int** matrix = new int*[ rows ];
+    for ( size_t count = 0; count < rows; count++ )
+        matrix[count] = new int[ columns ];
+    input_matrix( matrix, rows, columns );
+    std::cout << "\nYour matrix is... \n\n";
+    print_matrix( matrix, rows, columns);
+    std::cout << "\nChange row with first row ... \n\n";
+    swap_min( matrix, rows, columns );
+    std::cout << "Modified matrix... \n\n";
+    print_matrix( matrix, rows, columns);
+    std::cout << "\nFree memory... \n";
+    for ( size_t count = 0; count < rows; count++ )
+        delete[ ] matrix[ count ];
+    return 0;
+}
+
+// int		main()
+// {
+
+// 	int m[3][3] = {{4, 5, 3}, {2, 5, 9}, {1, 4, 2}};
+
+// 	for (int i = 0; i < 3; i++) {
+// 		for (int j = 0; j < 3; j++) {
+// 			cout << m[i][j];
+// 		}
+// 		cout << endl;
+// 		swap_min(m, 3, 3);
+// 	}
+// 		return (0);
+// }
 
 // int		get_log(int x)
 // {
