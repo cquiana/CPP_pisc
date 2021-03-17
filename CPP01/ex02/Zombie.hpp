@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 10:43:54 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 14:29:11 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:46:34 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ private:
 	std::string _name;
 	std::string _type;
 public:
-	Zombie();
+	Zombie(void);
 	Zombie(std::string name, std::string type);
-	~Zombie();
+	~Zombie(void);
 
 	void announce();
 };

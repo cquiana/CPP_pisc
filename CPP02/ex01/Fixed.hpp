@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 10:43:54 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/16 12:47:14 by cquiana          ###   ########.fr       */
+/*   Created: 2021/03/16 13:57:15 by cquiana           #+#    #+#             */
+/*   Updated: 2021/03/16 16:47:46 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
-class Zombie
+class Fixed
 {
 private:
-	std::string _name;
-	std::string _type;
+	int					_fixedPointValue;
+	static const int	_fracBits = 8;
 public:
-	Zombie(void);
-	Zombie(std::string name, std::string type);
-	~Zombie(void);
-
-	void setInfo(void);
-	void announce(void);
+	Fixed(void);
+	Fixed(const Fixed &old);
+	Fixed(const int iValue);
+	Fixed(const float fValue);
+	~Fixed(void);
+	Fixed &operator= (const Fixed &old);
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
+	float toFloat(void) const;
+	int	toInt(void) const;
 };
+	std::ostream &operator<< (std::ostream &out, const Fixed &fValue);
 
 #endif

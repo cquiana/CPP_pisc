@@ -6,20 +6,20 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 22:13:23 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/13 00:06:58 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 14:56:59 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain()
+Brain::Brain(void)
 {
 	this->_weigth = 1.4;
 	this->_size = 2.1;
 	return;
 }
 
-Brain::~Brain()
+Brain::~Brain(void)
 {
 	return;
 }

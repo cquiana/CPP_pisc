@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 15:39:08 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 21:27:26 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:47:49 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ZombieHorde::ZombieHorde(int n) : _N(n)
 	return;
 }
 
-ZombieHorde::~ZombieHorde()
+ZombieHorde::~ZombieHorde(void)
 {
 	delete[] this->_zombie;
 	std::cout << "ZombieHorde is dead" << std::endl;

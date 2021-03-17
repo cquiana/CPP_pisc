@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 06:58:44 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 10:33:37 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/15 19:57:24 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ private:
 	std::string _color;
 public:
 	Pony(int age, std::string name, std::string color);
-	~Pony();
+	~Pony(void);
 
-	void getInfo();
+	void getInfo(void);
 };
 
 #endif

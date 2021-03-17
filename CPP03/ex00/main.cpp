@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 10:43:54 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/16 12:47:14 by cquiana          ###   ########.fr       */
+/*   Created: 2021/03/17 08:13:33 by cquiana           #+#    #+#             */
+/*   Updated: 2021/03/17 13:43:48 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "FragTrap.hpp"
 
-#include <iostream>
-#include <string>
-
-class Zombie
+int		main(void)
 {
-private:
-	std::string _name;
-	std::string _type;
-public:
-	Zombie(void);
-	Zombie(std::string name, std::string type);
-	~Zombie(void);
+	FragTrap a;
+	FragTrap b("New");
 
-	void setInfo(void);
-	void announce(void);
-};
+	b.rangedAttack("test");
+	b.meleeAttack("test");
+	b.takeDamage(20);
+	b.beRepaired(10);
 
-#endif
+	return 0;
+}

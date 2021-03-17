@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 23:06:04 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/13 00:13:26 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 11:34:35 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Human();
 	~Human();
 
-	Brain getBrain(void);
+	Brain &getBrain(void);
 	std::string identify(void);
 };
 

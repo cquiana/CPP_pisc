@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 07:21:49 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/15 07:26:58 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/17 16:31:03 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ private:
 
 public:
 	HumanB(std::string name);
-	~HumanB();
+	~HumanB(void);
 
 	void attack(void) const;
-	void setWeapon(Weapon &_weapon);
+	void setWeapon(Weapon &weapon);
 };
 
 #endif

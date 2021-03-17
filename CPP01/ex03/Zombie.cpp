@@ -6,13 +6,13 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 10:45:46 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 21:19:35 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:46:55 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie()
+Zombie::Zombie(void)
 {
 	std::cout << "Zombie " << this->_name << " is born" << std::endl;
 	return;

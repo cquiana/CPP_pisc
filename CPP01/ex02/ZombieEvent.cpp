@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 10:53:53 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 14:13:33 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:46:33 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ZombieEvent::ZombieEvent(void)
 	return;
 }
 
-ZombieEvent::~ZombieEvent()
+ZombieEvent::~ZombieEvent(void)
 {
 	return;
 }

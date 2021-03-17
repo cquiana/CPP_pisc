@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 07:36:31 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/15 19:55:00 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/17 14:58:33 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,24 @@ int		main(int ac, char **av)
 	sed.setParam(av[1], av[2], av[3]);
 	if (!sed.validate())
 	{
-		std::cout << "Error: Empty second parametr" << std::endl;
+		std::cout << "Error: Empty second parametr!" << std::endl;
 		return 2;
 	}
 	if (!sed.openInputFile())
 	{
 		std::cout << "Error: Input file can't open" << std::endl;
-		return 3;
+		return 4;
 	}
 	str = sed.getStr();
+	if (str == "")
+	{
+		std::cout << "Error: File is empty!" << std::endl;
+		return 3;
+	}
 	if (!sed.openOutnputFile())
 	{
 		std::cout << "Error: Output file can't open" << std::endl;
-		return 4;
+		return 5;
 	}
 	sed.findAndReplace(str);
 	sed.writeToRep(str);

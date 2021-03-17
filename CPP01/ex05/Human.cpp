@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 23:08:44 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/13 00:13:02 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 11:35:41 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Human::~Human(void)
 	return;
 }
 
-Brain	Human::getBrain(void)
+Brain&	Human::getBrain(void)
 {
 	return this->_brain;
 }

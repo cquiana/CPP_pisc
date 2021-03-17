@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 10:48:18 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 14:00:16 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:46:30 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class ZombieEvent
 private:
 	std::string _type;
 public:
-	ZombieEvent();
-	~ZombieEvent();
+	ZombieEvent(void);
+	~ZombieEvent(void);
 
 	void setZombieType(std::string type);
 	Zombie *newZombie(std::string name);

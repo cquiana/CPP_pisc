@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 22:08:13 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/15 09:07:35 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 11:35:14 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 
 int	main(void)
 {
-
-	Human adam;
-	std::cout << adam.identify() << std::endl;
-	std::cout << adam.getBrain().identify() << std::endl;
 
 	Human adam;
 	std::cout << adam.identify() << std::endl;

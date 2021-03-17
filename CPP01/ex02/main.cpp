@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 13:17:32 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 18:39:29 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/15 20:38:10 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,15 @@ int		main(void)
 
 	std::cout << "Zombie on stack(epmty)" << std::endl;
 	empty.announce();
-
+	std::cout << std::endl;
 	std::cout << "Zombie on stack" << std::endl;
 	zombieOnStack.announce();
-
+	std::cout << std::endl;
 	std::cout << "Zombie on heap" << std::endl;
 	newEvent.setZombieType("fast");
 	zombOnHeap = newEvent.newZombie("Mick");
 	zombOnHeap->announce();
-
+	std::cout << std::endl;
 	std::cout << "Random Zombie on heap" << std::endl;
 	std::cout << std::endl;
 	randZombie = randomChump();

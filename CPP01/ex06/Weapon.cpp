@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 08:28:02 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/15 07:32:38 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/15 20:44:22 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Weapon::~Weapon(void)
 	return;
 }
 
-std::string const &Weapon::getType()
+std::string const &Weapon::getType(void)
 {
 	return this->_type;
 }

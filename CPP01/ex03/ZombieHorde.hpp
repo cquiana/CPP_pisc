@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 15:37:21 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/12 15:44:43 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 12:47:34 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ private:
 	Zombie*	_zombie;
 public:
 	ZombieHorde(int n);
-	~ZombieHorde();
+	~ZombieHorde(void);
 
-	void announce();
+	void announce(void);
 };
 
 #endif

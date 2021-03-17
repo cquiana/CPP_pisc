@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 07:23:13 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/15 07:30:22 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 14:57:08 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ HumanB::HumanB(std::string name) : _name (name)
 	return;
 }
 
-HumanB::~HumanB()
+HumanB::~HumanB(void)
 {
 	return;
 }

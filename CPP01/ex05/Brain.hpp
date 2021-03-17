@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 22:11:28 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/13 00:06:10 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/16 14:57:06 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ private:
 	float	_size;
 	std::string _addr;
 public:
-	Brain();
-	~Brain();
+	Brain(void);
+	~Brain(void);
 
 	std::string identify();
 };
