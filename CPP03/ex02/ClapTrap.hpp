@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/17 08:10:53 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/20 15:04:58 by cquiana          ###   ########.fr       */
+/*   Created: 2021/03/19 22:10:03 by cquiana           #+#    #+#             */
+/*   Updated: 2021/03/20 15:57:10 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef CLAP_TRAP_HPP
+#define CLAP_TRAP_HPP
 
 /*
 **         Colors
@@ -28,31 +28,31 @@
 #include <iostream>
 #include <string>
 
-class FragTrap
+class ClapTrap
 {
-private:
+protected:
 	unsigned int			_hitPoints;
 	unsigned int			_maxHintPoints;
 	unsigned int			_energyPoints;
 	unsigned int			_maxEnergyPoints;
 	unsigned int			_level;
 	std::string				_name;
+	std::string				_type;
 	unsigned int			_meleeAttackDamage;
 	unsigned int			_rangedAttackDamage;
 	unsigned int			_armorDamageReduction;
-
 public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(FragTrap const &fragTrap);
-	~FragTrap();
+	ClapTrap();
+	ClapTrap(std::string name);
+	ClapTrap(ClapTrap const &clapTrap);
+	~ ClapTrap();
 
 	void	rangedAttack(std::string const &target);
 	void	meleeAttack(std::string const &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	FragTrap &operator= (FragTrap const &fragTrap);
-	void	vaulthunter_dot_exe(std::string const &target);
+	ClapTrap &operator= (ClapTrap const &ClapTrap);
 };
+
 
 #endif

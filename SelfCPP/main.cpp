@@ -62,30 +62,42 @@ void input_matrix( int *m[ ], const unsigned rows, const unsigned cols )
         }
 }
 
+// struct Person {
+// virtual string name () const { return name_ ; }
+// };
+
+
+// struct Professor : Person {
+// string name () const {
+// return " Prof . " + Person :: name ();
+// }
+
+// };
 
 int main()
 {
-    unsigned rows, columns;
-    std::cout << "Input number of rows: ";
-    std::cin >> rows;
-    std::cout << "Input number of columns: ";
-    std::cin >> columns;
-    int** matrix = new int*[ rows ];
-    for ( size_t count = 0; count < rows; count++ )
-        matrix[count] = new int[ columns ];
-    input_matrix( matrix, rows, columns );
-    std::cout << "\nYour matrix is... \n\n";
-    print_matrix( matrix, rows, columns);
-    std::cout << "\nChange row with first row ... \n\n";
-    swap_min( matrix, rows, columns );
-    std::cout << "Modified matrix... \n\n";
-    print_matrix( matrix, rows, columns);
-    std::cout << "\nFree memory... \n";
-    for ( size_t count = 0; count < rows; count++ )
-        delete[ ] matrix[ count ];
+
     return 0;
 }
 
+    // unsigned rows, columns;
+    // std::cout << "Input number of rows: ";
+    // std::cin >> rows;
+    // std::cout << "Input number of columns: ";
+    // std::cin >> columns;
+    // int** matrix = new int*[ rows ];
+    // for ( size_t count = 0; count < rows; count++ )
+    //     matrix[count] = new int[ columns ];
+    // input_matrix( matrix, rows, columns );
+    // std::cout << "\nYour matrix is... \n\n";
+    // print_matrix( matrix, rows, columns);
+    // std::cout << "\nChange row with first row ... \n\n";
+    // swap_min( matrix, rows, columns );
+    // std::cout << "Modified matrix... \n\n";
+    // print_matrix( matrix, rows, columns);
+    // std::cout << "\nFree memory... \n";
+    // for ( size_t count = 0; count < rows; count++ )
+    //     delete[ ] matrix[ count ];
 // int		main()
 // {
 
