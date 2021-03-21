@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 23:04:20 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/20 16:50:40 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/20 16:59:02 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,27 @@ NinjaTrap &NinjaTrap::operator= (NinjaTrap const &ninjaTrap)
 	_rangedAttackDamage = ninjaTrap._rangedAttackDamage;
 	_armorDamageReduction = ninjaTrap._armorDamageReduction;
 	return (*this);
+}
+void	NinjaTrap::ninjaShoebox(ClapTrap &target)
+{
+	std::cout << CYAN << _type << " " << _name << " use ninjaShoebox vs " << target.getName() << RESET << std::endl;
+	target.rangedAttack(target.getName());
+}
+
+void	NinjaTrap::ninjaShoebox(FragTrap &target)
+{
+	std::cout << BLUE << _type << " " << _name << " use ninjaShoebox vs " << target.getName() << RESET << std::endl;
+	target.meleeAttack(target.getName());
+}
+
+void	NinjaTrap::ninjaShoebox(ScavTrap &target)
+{
+	std::cout << YELLOW << _type << " " << _name << " use ninjaShoebox vs " << target.getName() << RESET << std::endl;
+	target.challengeNewcomer();
+}
+
+void	NinjaTrap::ninjaShoebox(NinjaTrap &target)
+{
+	std::cout << MAGENTA << _type << " Stupid " << _name << " use ninjaShoebox vs " << target.getName() << RESET << std::endl;
+	target.takeDamage(10);
 }
