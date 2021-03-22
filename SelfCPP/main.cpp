@@ -1,37 +1,26 @@
 #include <iostream>
 #include <cmath>
 #include "sample.hpp"
-using namespace std;
+#include <string>
+// using namespace std;
 
 
-class Polygon {
-  protected:
-    int width, height;
-  public:
-    void set_values (int a, int b)
-      { width=a; height=b; }
-};
 
-class Rectangle: public Polygon {
-  public:
-    int area()
-      { return width*height; }
-};
+int main ()
+{
+ std::string str1 ("green apple");
+  std::string str2 ("red apple");
 
-class Triangle: public Polygon {
-  public:
-    int area()
-      { return width*height/2; }
-};
+  if (str1.compare(str2) != 0)
+    std::cout << str1 << " is not " << str2 << '\n';
 
-int main () {
-  Rectangle rect;
-  Triangle trgl;
-  Polygon * ppoly1 = &rect;
-  Polygon * ppoly2 = &trgl;
-  ppoly1->set_values (4,5);
-  ppoly2->set_values (4,5);
-  cout << rect.area() << '\n';
-  cout << trgl.area() << '\n';
+  if (str1.compare(6,5,"apple") == 0)
+    std::cout << "still, " << str1 << " is an apple\n";
+
+  if (str2.compare(str2.size()-5,5,"apple") == 0)
+    std::cout << "and " << str2 << " is also an apple\n";
+
+  if (str1.compare(6,5,str2,4,5) == 0)
+    std::cout << "therefore, both are apples\n";
   return 0;
 }

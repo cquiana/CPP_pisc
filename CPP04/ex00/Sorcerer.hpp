@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 12:29:12 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 13:39:50 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/22 06:46:18 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ private:
 	std::string		_name;
 	std::string		_title;
 public:
+	Sorcerer();
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(Sorcerer const &old);
 	~Sorcerer();
