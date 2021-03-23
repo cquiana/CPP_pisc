@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 13:13:42 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 14:11:55 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/22 19:02:27 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ protected:
 public:
 	Victim(std::string name);
 	Victim(Victim &old);
-	~Victim();
+	virtual ~Victim();
 	Victim &operator=(Victim const &old);
 	std::string const getName() const;
 	virtual void getPolymorphed() const;
