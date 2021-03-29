@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 07:01:53 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 09:31:43 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:02:35 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ TacticalMarine::TacticalMarine(TacticalMarine const &old)
 
 TacticalMarine &TacticalMarine::operator=(TacticalMarine const &old)
 {
-	(void) old;
+	if (this != &old)
+		(void) old;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 19:08:59 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 22:41:48 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:11:04 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ public:
 	RadScorpion();
 	RadScorpion(RadScorpion const &old);
 	virtual ~RadScorpion();
+	RadScorpion &operator=(RadScorpion const &old);
 	void takeDamage(int damage);
 };
 

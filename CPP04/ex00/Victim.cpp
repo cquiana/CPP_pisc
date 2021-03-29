@@ -6,11 +6,16 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 13:14:42 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 14:53:37 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:48:21 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Victim.hpp"
+
+Victim::Victim()
+{
+	std::cout << "Some random victim called" << std::endl;
+}
 
 Victim::Victim(std::string name) : _name(name)
 {
@@ -26,7 +31,8 @@ Victim::Victim(Victim &old)
 Victim &Victim::operator=(Victim const &old)
 {
 	std::cout << "Assignation constructor!" <<  std::endl;
-	_name = old._name;
+	if (this != &old)
+		_name = old._name;
 	return (*this);
 }
 

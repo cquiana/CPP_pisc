@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 16:06:24 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 17:26:16 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:40:00 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class AWeapon
 {
-private:
+protected:
 	std::string	_name;
 	int			_apcost;
 	int			_damage;

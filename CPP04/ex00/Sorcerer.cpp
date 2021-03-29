@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 12:31:33 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 06:47:20 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:47:21 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,11 @@ Sorcerer::Sorcerer(Sorcerer const &old)
 Sorcerer &Sorcerer::operator=(Sorcerer const &old)
 {
 	std::cout  << "Assignation constructor!" << std::endl;
-	_name = old._name;
-	_title = old._title;
+	if (this != &old)
+	{
+		_name = old._name;
+		_title = old._title;
+	}
 	return (*this);
 }
 

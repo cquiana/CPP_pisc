@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 14:31:03 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 17:38:12 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:04:36 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ Ice::Ice(Ice const &old)
 }
 Ice &Ice::operator=(Ice const &old)
 {
-	_type = old._type;
-	_xp = old._xp;
+	if (this != &old)
+	{
+		_type = old._type;
+		_xp = old._xp;
+	}
 	return (*this);
 }
 AMateria* Ice::clone() const

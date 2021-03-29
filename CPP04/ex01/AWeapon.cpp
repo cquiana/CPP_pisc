@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 16:17:29 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 16:22:44 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:59:25 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,12 @@ AWeapon::AWeapon(AWeapon const &old)
 
 AWeapon &AWeapon::operator=(AWeapon const &old)
 {
-	_name = old._name;
-	_apcost = old._apcost;
-	_damage = old._damage;
+	if (this != &old)
+	{
+		_name = old._name;
+		_apcost = old._apcost;
+		_damage = old._damage;
+	}
 	return (*this);
 }
 

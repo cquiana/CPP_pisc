@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 13:17:18 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 18:13:50 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 16:49:37 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ int		main()
 	me->use(0, *bob);
 	me->use(1, *bob);
 	std::cout << "============test===========" << std::endl;
+	AMateria *unq;
 	tmp = src->createMateria("ice");
-	AMateria *unq = tmp;
 	me->equip(tmp);
+	unq = tmp;
 	me->use(2, *bob);
 	me->use(-3, *bob);
 	me->use(3, *bob);
 	me->unequip(2);
-	me->unequip(3);
 	delete unq;
 	delete bob;
-	delete me;
 	delete src;
+	delete me;
 	std::cout << "============test===========" << std::endl;
 	return 0;
 }

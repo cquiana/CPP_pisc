@@ -6,7 +6,7 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/23 08:22:56 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/23 16:04:08 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/29 18:53:53 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm SCRF_shrubbery
 
 re: fclean all
 	@echo "Project was remaked"

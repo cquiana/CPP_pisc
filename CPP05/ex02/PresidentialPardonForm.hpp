@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:06:04 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 20:22:07 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:44:58 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 
 class PresidentialPardonForm : public Form
 {
+private:
+	PresidentialPardonForm();
 public:
 	PresidentialPardonForm(std::string const &target);
-	~PresidentialPardonForm();
+	virtual ~PresidentialPardonForm();
 	PresidentialPardonForm(PresidentialPardonForm const &old);
 	PresidentialPardonForm &operator=(PresidentialPardonForm const &old);
 

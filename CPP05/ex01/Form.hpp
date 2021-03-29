@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 13:03:33 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 15:10:39 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:41:05 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ private:
 	const int _gradeToSign;
 	const int _gradeToExec;
 	bool _isSign;
-public:
 	Form();
+public:
 	Form(std::string const &name, int gradeToSign, int gradeToExec);
 	Form(const Form &old);
 	~Form();

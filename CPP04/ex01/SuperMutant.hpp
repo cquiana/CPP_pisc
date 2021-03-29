@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 18:39:54 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 22:42:04 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:47:23 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class SuperMutant : public Enemy
 public:
 	SuperMutant();
 	SuperMutant(SuperMutant const &old);
+	SuperMutant &operator=(SuperMutant const &old);
 	virtual ~SuperMutant();
 	void takeDamage(int damage);
 };

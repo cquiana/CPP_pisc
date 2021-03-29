@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 13:25:53 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 17:45:53 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:03:49 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ AMateria::AMateria(AMateria const &old)
 }
 AMateria &AMateria::operator=(AMateria const &old)
 {
-	_type = old._type;
-	_xp = old._xp;
+	if (this != &old)
+	{
+		_type = old._type;
+		_xp = old._xp;
+	}
 	return (*this);
 }
 

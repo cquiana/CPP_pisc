@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 14:31:06 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 15:03:34 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:48:04 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Hobbit::~Hobbit()
 Hobbit &Hobbit::operator=(Hobbit const &old)
 {
 	std::cout  << "Assignation constructor!" << std::endl;
-	_name = old._name;
+	if (this != &old)
+		_name = old._name;
 	return (*this);
 }
 

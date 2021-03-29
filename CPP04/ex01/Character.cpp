@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 19:14:47 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 22:30:34 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:59:57 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,12 @@ Character::Character(Character const &old)
 
 Character &Character::operator=(Character const &old)
 {
-	_name = old._name;
-	_ap = old._ap;
-	_weapon = old._weapon;
+	if (this != &old)
+	{
+		_name = old._name;
+		_ap = old._ap;
+		_weapon = old._weapon;
+	}
 	return (*this);
 }
 

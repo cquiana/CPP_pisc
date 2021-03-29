@@ -6,11 +6,14 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 13:03:44 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 22:29:02 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:11:49 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form() : _name("noname"), _gradeToSign(1), _gradeToExec(1), _isSign(false)
+{}
 
 Form::Form(std::string const &name, int gradeToSign, int gradeToExec) :
  _name(name), _gradeToSign(gradeToSign), _gradeToExec(gradeToExec), _isSign(false)
@@ -71,9 +74,9 @@ std::ostream &operator<<(std::ostream &os, Form const &form)
 	<< " has grade to sign: " << form.getGradeToSign()
 	<< " grade to execute: " << form.getGradeToExec();
 	if (form.getIsSign() == false)
-		os << " form is unsigned" << std::endl;
+		os << " form is unsigned";
 	else
-		os << " form is signed" << std::endl;
+		os << " form is signed";
 	return (os);
 }
 

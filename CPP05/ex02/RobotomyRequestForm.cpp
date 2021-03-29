@@ -6,11 +6,15 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 20:24:44 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 22:34:53 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:45:35 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm() : Form("Robotomy Request", 72, 45, "no target")
+{
+}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string const &target) : Form("Robotomy Request", 72, 45, target)
 {
@@ -47,5 +51,5 @@ void RobotomyRequestForm::execute(Bureaucrat const &bureauc) const
 
 const char *RobotomyRequestForm::RobotomyRandomExeption::what() const throw ()
 {
-	return ("Form has been robotomized failure");
+	return ("Robotomized failure!");
 }

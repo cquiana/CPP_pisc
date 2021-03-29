@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 13:51:15 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 14:54:11 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 14:47:45 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ Peon::~Peon()
 Peon &Peon::operator=(Peon const &old)
 {
 	std::cout  << "Assignation constructor!" << std::endl;
-	_name = old._name;
+	if (this != &old)
+		_name = old._name;
 	return(*this);
 }
 

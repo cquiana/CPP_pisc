@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 14:29:54 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 18:42:06 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:04:25 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ Cure::Cure(Cure const &old)
 }
 Cure &Cure::operator=(Cure const &old)
 {
-	_type = old._type;
-	_xp = old._xp;
+	if (this != &old)
+	{
+		_type = old._type;
+		_xp = old._xp;
+	}
 	return (*this);
 }
 AMateria* Cure::clone() const

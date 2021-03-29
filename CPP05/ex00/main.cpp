@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 08:02:28 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 17:12:12 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 17:38:43 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 	}
 	catch(std::exception& ex)
 	{
-		std::cout << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	std::cout << std::endl;
 	try
@@ -31,7 +31,7 @@ int main()
 	}
 	catch(std::exception& ex)
 	{
-		std::cout << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	std::cout << std::endl;
 	try
@@ -41,7 +41,7 @@ int main()
 	}
 	catch(std::exception& ex)
 	{
-		std::cout << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	std::cout << std::endl;
 	try
@@ -52,7 +52,7 @@ int main()
 	}
 	catch(std::exception& ex)
 	{
-		std::cout << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	std::cout << std::endl;
 	try
@@ -63,7 +63,7 @@ int main()
 	}
 	catch(std::exception& ex)
 	{
-		std::cout << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	return 0;
 }

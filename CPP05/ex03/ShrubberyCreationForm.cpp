@@ -6,11 +6,15 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:04:42 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 22:34:43 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:37:38 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+
+ShrubberyCreationForm::ShrubberyCreationForm() : Form("Shrubbery Creation", 145, 137, "no target")
+{
+}
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target) : Form("Shrubbery Creation", 145, 137, target)
 {

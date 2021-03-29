@@ -2,25 +2,30 @@
 #include <cmath>
 #include "sample.hpp"
 #include <string>
+#include <vector>
 // using namespace std;
 
 
 
 int main ()
 {
- std::string str1 ("green apple");
-  std::string str2 ("red apple");
+  std::vector<int> myVect(12, 0);
+  std::vector<int>::iterator it;
 
-  if (str1.compare(str2) != 0)
-    std::cout << str1 << " is not " << str2 << '\n';
+  it = myVect.begin();
 
-  if (str1.compare(6,5,"apple") == 0)
-    std::cout << "still, " << str1 << " is an apple\n";
+  it++;
 
-  if (str2.compare(str2.size()-5,5,"apple") == 0)
-    std::cout << "and " << str2 << " is also an apple\n";
+  // std::cout << *it << std::endl;
+  // *it = 1000;
+  // std::cout << *it << std::endl;
 
-  if (str1.compare(6,5,str2,4,5) == 0)
-    std::cout << "therefore, both are apples\n";
+
+  // for (size_t i = 0; i < myVect.size(); i++)
+  // {
+  //   std::cout << myVect[i] << std::endl;
+  // }
+
+
   return 0;
 }

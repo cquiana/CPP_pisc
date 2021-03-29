@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 18:30:42 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 22:34:21 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:00:21 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ Enemy::Enemy(Enemy const &old)
 
 Enemy &Enemy::operator=(Enemy const &old)
 {
-	_hp = old._hp;
-	_type = old._type;
+	if (this != &old)
+	{
+		_hp = old._hp;
+		_type = old._type;
+	}
 	return (*this);
 }
 

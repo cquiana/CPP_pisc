@@ -6,11 +6,15 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 16:07:39 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 22:35:14 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:44:39 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
+
+PresidentialPardonForm::PresidentialPardonForm() : Form("Presidential Pardon", 25, 5, "no target")
+{
+}
 
 PresidentialPardonForm::PresidentialPardonForm(std::string const &target) : Form("Presidential Pardon", 25, 5, target)
 {

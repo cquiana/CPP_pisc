@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 14:29:58 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 14:33:15 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:02:46 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Hobbit : public Victim
 public:
 	Hobbit(std::string name);
 	Hobbit(Hobbit const &old);
-	~Hobbit();
+	virtual ~Hobbit();
 	Hobbit &operator=(Hobbit const &old);
 	std::string	const getName() const;
 	void getPolymorphed() const;

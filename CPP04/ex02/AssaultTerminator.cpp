@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 07:01:20 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 08:52:41 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:02:17 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ AssaultTerminator::AssaultTerminator(AssaultTerminator const &old)
 
 AssaultTerminator &AssaultTerminator::operator=(AssaultTerminator const &old)
 {
-	(void) old;
+	if (this != &old)
+		(void) old;
 	return (*this);
 }
 

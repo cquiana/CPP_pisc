@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 15:24:03 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/26 10:24:20 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 18:39:05 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@
 class Intern
 {
 private:
-    Form *makePPF(std::string target);
-    Form *makeRRF(std::string target);
-    Form *makeSCF(std::string target);
-
-public:
     Intern();
+public:
     Intern(Intern const &old);
     ~Intern();
     Intern &operator=(Intern const &old);
+    Form *makePPF(std::string target);
+    Form *makeRRF(std::string target);
+    Form *makeSCF(std::string target);
 
     Form *makeForm(std::string formType, std::string target);
     class CreateFormExeption : public std::exception

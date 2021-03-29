@@ -6,13 +6,13 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 20:02:00 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/23 17:13:43 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 17:37:15 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("Noname"), _grade(150)
+Bureaucrat::Bureaucrat()
 {
 }
 

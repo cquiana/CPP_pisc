@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 16:37:49 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 17:42:18 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 15:00:54 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,17 @@ PlasmaRifle::~PlasmaRifle()
 PlasmaRifle::PlasmaRifle(PlasmaRifle const &old)
 {
 	*this = old;
+}
+
+PlasmaRifle &PlasmaRifle::operator=(PlasmaRifle const &old)
+{
+	if (this != &old)
+	{
+		_name = old._name;
+		_apcost = old._apcost;
+		_damage = old._damage;
+	}
+	return (*this);
 }
 
 void	PlasmaRifle::attack() const

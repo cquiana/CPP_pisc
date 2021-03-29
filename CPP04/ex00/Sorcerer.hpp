@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 12:29:12 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/22 19:01:02 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:06:01 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Sorcerer
 private:
 	std::string		_name;
 	std::string		_title;
-public:
 	Sorcerer();
+public:
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(Sorcerer const &old);
 	~Sorcerer();

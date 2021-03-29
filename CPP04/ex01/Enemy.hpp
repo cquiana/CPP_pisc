@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/21 18:26:12 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/21 18:35:13 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/28 13:18:08 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Enemy
 {
-private:
+protected:
 	int			_hp;
 	std::string	_type;
 public:
