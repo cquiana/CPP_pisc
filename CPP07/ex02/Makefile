@@ -6,13 +6,15 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/28 07:45:19 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/28 07:45:27 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/30 06:49:36 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	array
 
 SRCS	=	main.cpp
+
+HEADER	= Array.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -26,13 +28,13 @@ all: $(NAME)
 	$(CL) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS) $(HEADER)
-	@$(CL) $(OBJS) $(FLAGS) -o $(NAME)
+	$(CL) $(OBJS) $(FLAGS) -o $(NAME)
 
 clean:
-	@rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 	@echo "Project was remaked"

@@ -6,12 +6,9 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 07:29:24 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/28 10:17:01 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/30 12:42:32 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <iostream>
-#include <string>
 
 #include "Array.hpp"
 
@@ -43,6 +40,7 @@ int main()
 	Array<int> b(a);
 	std::cout << "Size of array = " << b.size() << std::endl;
 	b.setData(0, 5);
+
 	std::cout << std::endl;
 	std::cout << "====== Print data 2 ======"<< std::endl;
 	for (size_t i = 0; i < a.size(); i++)
@@ -55,8 +53,10 @@ int main()
 		std::cout << "#" << i << " b = " << b[i] << std::endl;
 	}
 
-	Array<int> c = b;
+	Array<int> c;
+	c = b;
 	c.setData(1, 21);
+	c[4] = 42;
 	std::cout << std::endl;
 	std::cout << "====== Print data 3 ======"<< std::endl;
 	for (size_t i = 0; i < b.size(); i++)
@@ -81,11 +81,14 @@ int main()
 	{
 		std::cout << "#" << i << " str = " << str1[i] << std::endl;
 	}
-
 	std::cout << std::endl;
 	std::cout << "====== Print  const string ======"<< std::endl;
 	const Array<std::string> str2 = str1;
-	std::cout << str2[0] << std::endl;
+	str2[0] = "Abracadabra!";
+	for (size_t i = 0; i < 3; i++)
+	{
+		std::cout << "#" << i << " str = " << str1[i] << std::endl;
+	}
 
 	return 0;
 }

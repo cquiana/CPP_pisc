@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 21:05:46 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/27 22:25:19 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/30 06:30:52 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,39 @@ int main()
     std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
     std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 	std::cout << std::endl;
-	std::cout << "====== test ======" << std::endl;
+	std::cout << "====== double ======" << std::endl;
 	double e = 42.024;
     double f = 21.042;
     ::swap(e, f);
     std::cout << "e = " << e << ", f = " << f << std::endl;
     std::cout << "min( e, f ) = " << ::min( e, f ) << std::endl;
     std::cout << "max( e, f ) = " << ::max( e, f ) << std::endl;
+
+
+    std::cout << "====== char ======" << std::endl;
+	char ch1 = 'a';
+    char ch2 = 'b';
+    ::swap(ch1, ch2);
+    std::cout << "ch1 = " << ch1 << ", ch2 = " << ch2 << std::endl;
+    std::cout << "min( ch1, ch2 ) = " << ::min( ch1, ch2 ) << std::endl;
+    std::cout << "max( ch1, ch2 ) = " << ::max( ch1, ch2 ) << std::endl;
+
+
+    // class
+// Awesome {
+// public:
+//     Awesome( int n ) : _n( n ) {}
+//     bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+//     bool operator!=( Awesome const & rhs ) const{ return (this->_n != rhs._n); }
+//     bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+//     bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+//     bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+//     bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+
+//     int getN(){ return _n;};
+// private:
+//     int _n;
+// };
 
     // std::cout << std::endl;
 	// std::cout << "====== test class ======" << std::endl;

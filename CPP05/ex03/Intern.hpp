@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 15:24:03 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/29 18:39:05 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 19:21:22 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@
 
 class Intern
 {
-private:
-    Intern();
 public:
+    Intern();
     Intern(Intern const &old);
     ~Intern();
     Intern &operator=(Intern const &old);

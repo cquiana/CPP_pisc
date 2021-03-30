@@ -6,7 +6,7 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/27 20:03:37 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/27 20:05:00 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/29 22:39:20 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,13 @@ all: $(NAME)
 	$(CL) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS) $(HEADER)
-	@$(CL) $(OBJS) $(FLAGS) -o $(NAME)
+	$(CL) $(OBJS) $(FLAGS) -o $(NAME)
 
 clean:
-	@rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 	@echo "Project was remaked"

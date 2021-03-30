@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 17:38:09 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/27 17:45:50 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/29 22:38:31 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ public:
 	Convert();
 	Convert(std::string str);
 	Convert(Convert const &old);
-	Convert &operator=(Convert const &old);
 	~Convert();
+
+	Convert &operator=(Convert const &old);
 
 	bool checkArgv();
 	bool isFloat();

@@ -6,7 +6,7 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 17:51:12 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/27 20:09:00 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/30 12:05:50 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void *serialize(void)
 		std::cout << result[i];
 	}
 	std::cout << std::endl;
-	int value = rand();
+	int value = rand() % 100000;
 	std::cout << "int = " << value << std::endl;
 	*reinterpret_cast<int*>(result + sizeof(std::string)) = value;
 	std::cout << "s2 = ";
@@ -50,9 +50,9 @@ Data *deserialize(void *raw)
 {
 	Data *data = new Data;
 
-	data->s1 = std::string(reinterpret_cast<char *>(raw), sizeof(std::string));
+	data->s1 = std::string(reinterpret_cast<char *>(raw));
 	data->n = *reinterpret_cast<int*>(reinterpret_cast<char *>(raw) + sizeof(std::string));
-	data->s2 = std::string(reinterpret_cast<char *>(raw) + sizeof(std::string) + sizeof(int), sizeof(std::string));
+	data->s2 = std::string(reinterpret_cast<char *>(raw) + sizeof(std::string) + sizeof(int));
 
 	return data;
 }

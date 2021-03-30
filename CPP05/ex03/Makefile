@@ -6,7 +6,7 @@
 #    By: cquiana <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/23 08:22:56 by cquiana           #+#    #+#              #
-#    Updated: 2021/03/26 10:25:01 by cquiana          ###   ########.fr        #
+#    Updated: 2021/03/29 19:22:29 by cquiana          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@rm Santa_Claus_shrubbery
 
 re: fclean all
 	@echo "Project was remaked"

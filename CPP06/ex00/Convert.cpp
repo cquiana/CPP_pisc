@@ -6,12 +6,11 @@
 /*   By: cquiana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/27 17:39:20 by cquiana           #+#    #+#             */
-/*   Updated: 2021/03/27 17:48:50 by cquiana          ###   ########.fr       */
+/*   Updated: 2021/03/30 09:46:24 by cquiana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Convert.hpp"
-
 
 Convert::Convert()
 {
@@ -20,18 +19,19 @@ Convert::Convert(std::string str) : _str(str)
 {
 }
 
+Convert::~Convert()
+{
+}
+
 Convert::Convert(Convert const &old)
 {
-	*this =  old;
+	*this = old;
 }
 Convert &Convert::operator=(Convert const &old)
 {
-	_str = old._str;
+	if (this != &old)
+		_str = old._str;
 	return (*this);
-}
-
-Convert::~Convert()
-{
 }
 
 bool	Convert::checkArgv()
@@ -59,6 +59,7 @@ bool	Convert::checkArgv()
 		return false;
 	return true;
 }
+
 bool Convert::isFloat()
 {
 	if (_str == "nanf" || _str == "+inff" || _str == "-inff" || (_str.find('.') != std::string::npos && _str[_str.size() - 1] == 'f'))
@@ -150,7 +151,7 @@ void	Convert::castToFloat()
 	if (isChar())
 	{
 		value = _str[0];
-		std::cout << std::fixed << std::setprecision(2) << static_cast<float>(value) << "f" << std::endl;
+		std::cout  << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
 		return;
 	}
 		if (isFloat())
@@ -158,7 +159,7 @@ void	Convert::castToFloat()
 		else
 			_ss << _str;
 		_ss >> value;
-		std::cout << std::fixed << std::setprecision(2) << static_cast<float>(value) << "f" << std::endl;
+		std::cout  << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
 }
 
 void	Convert::castToDouble()
@@ -168,7 +169,7 @@ void	Convert::castToDouble()
 	if (isChar())
 	{
 		value = _str[0];
-		std::cout << std::fixed << std::setprecision(2) << static_cast<double>(value) << std::endl;
+		std::cout << std::fixed << std::setprecision(1) << static_cast<double>(value) << std::endl;
 		return;
 	}
 	if (isFloat())
@@ -176,5 +177,5 @@ void	Convert::castToDouble()
 	else
 		_ss << _str;
 	_ss >> value;
-		std::cout << std::fixed << std::setprecision(2) << static_cast<double>(value) << std::endl;
+		std::cout  << std::fixed << std::setprecision(1) << static_cast<double>(value) << std::endl;
 }
